@@ -3,26 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | Kotonoha Slash</title>
+    <title>言の葉 Slash</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
+    //html部分
     <div id="unity-container" class="unity-desktop">
+
+      //実際のゲーム画面サイズ
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+
+      //ロード画面
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
+
+      //警告表示  
       <div id="unity-warning"> </div>
+
+      //フッター設定
       <div id="unity-footer">
         <div id="unity-logo-title-footer"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Kotonoha Slash</div>
       </div>
+
+
     </div>
+
+    //javascript部分
     <script>
       var canvas = document.querySelector("#unity-canvas");
 

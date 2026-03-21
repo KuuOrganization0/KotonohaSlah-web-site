@@ -7,9 +7,16 @@ body { padding: 0; margin: 0;
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
 #unity-container.unity-mobile { position: fixed; width: 100%; height: 100%;}
 
-/*プレイ画面*/
+/*PCとスマホのプレイ画面*/
 #unity-canvas { background: #231F20 }
-.unity-mobile #unity-canvas { width: 80%; height: auto;aspect-ratio: 16/9; display: block; }
+
+/*スマホのプレイ画面*/
+.unity-mobile #unity-canvas { 
+    /*プレイ画面の横幅*/width: 80%;
+    height: auto;
+    aspect-ratio: 16/9;
+    display: block;
+    /*中央寄せ*/ margin:auto }
 
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }

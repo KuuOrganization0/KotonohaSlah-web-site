@@ -103,7 +103,7 @@
       // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
       // expected to change.
 
-      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      if (window.innerWidth <= 1200)  { //判定をUAではなく、画面サイズに変更
         // Mobile device style: fill the whole browser client area with the game canvas:
 
         var meta = document.createElement('meta');

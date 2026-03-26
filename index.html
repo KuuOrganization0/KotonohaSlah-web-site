@@ -103,13 +103,17 @@
       // JS_FileSystem_Sync() behavior, but in future Unity version, this will be
       // expected to change.
 
+    function loadUpdate(){ //デバイスの判定を関数化
       if (window.innerWidth <= 1200)  { //判定をUAではなく、画面サイズに変更
         // Mobile device style: fill the whole browser client area with the game canvas:
 
+        if (!document.querySelector('meta[name="viewport"]')){ //何回もviewportを付与しないためのif
         var meta = document.createElement('meta');
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
+        }
+
         document.querySelector("#unity-container").className = "unity-mobile";
         canvas.className = "unity-mobile";
 
@@ -117,12 +121,15 @@
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
 
-
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
         canvas.style.width = "960px";
         canvas.style.height = "600px";
       }
+    }
+
+    loadUpdate(); //デバイス判定初回
+    window.addEventListener("resize",loadUpdate); //回転したときに判定
 
       document.querySelector("#unity-loading-bar").style.display = "block";
 

@@ -4,8 +4,14 @@ body { padding: 0; margin: 0;
    /*サイト全体*/
 #unity-container { position: absolute ;
     /*中央寄せ*/justify-content: center}
+
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
-#unity-container.unity-mobile { }
+
+/*ipadにPC用の中央寄せの適用するのを無効化*/
+@media (max-width:1200px){
+      #unity-container {left: 0; top: 0; transform: none} /*スマホでは親を左上に固定*/
+      #unity-container.unity-desktop { left: 0; top: 0; transform: none } /*PC用を無効化*/
+}
 
 /*PCとスマホのプレイ画面*/
 #unity-canvas { background: #231F20 ;
@@ -16,23 +22,26 @@ body { padding: 0; margin: 0;
 
 /*スマホの横画面のプレイ画面*/
 @media (orientation: landscape) {
-    body .unity-mobile #unity-canvas { 
+    .unity-mobile #unity-canvas { 
      aspect-ratio: 16/9;
     width: 50%;
     height: auto;
     display: block;
-    /*中央寄せ*/ margin:auto }
+    /*中央寄せ*/ margin:auto;
+    margin-top:5% }
 }
 
 
 /*スマホの縦画面のプレイ画面*/
+@media(orientation: portrait){
 .unity-mobile #unity-canvas { 
     /*プレイ画面の横幅*/width: 60%;
     height: auto;
     aspect-ratio: 16/9;
     display: block;
-    /*中央寄せ*/ margin:auto }
-
+    /*中央寄せ*/ margin:auto;
+    margin-top:5% }
+}
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }
 #unity-logo { width: 154px; height: 130px; background: url('unity-logo-dark.png') no-repeat center }
@@ -44,3 +53,4 @@ body { padding: 0; margin: 0;
 #unity-build-title { float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px }
 #unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
+

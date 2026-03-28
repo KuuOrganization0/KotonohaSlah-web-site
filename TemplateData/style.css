@@ -1,11 +1,21 @@
 body { padding: 0; margin: 0; 
      /*スマホのスクロールを可能に変更*/overflow:visible;}
 
-   /*サイト全体*/
+.game-frame {
+  position: relative; /*ゲーム画面のabsoluteの基準をgame-frameに変更*/
+  width: 80%;
+  height: auto;
+  padding-top: 56.25%; /* 16:9 の比率を確保 */
+  background: #444;    /* 黒背景 */
+  margin: 0 auto 30px; /* 下に余白を作る*/
+}
+
+
+
 #unity-container { position: absolute ;
     /*中央寄せ*/justify-content: center}
 
-#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%) }
+#unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 /*ipadにPC用の中央寄せの適用するのを無効化*/
 @media (max-width:1200px){
@@ -28,7 +38,7 @@ body { padding: 0; margin: 0;
     height: auto;
     display: block;
     /*中央寄せ*/ margin:auto;
-    margin-top:5% }
+    margin-top:20% }
 }
 
 
@@ -40,7 +50,7 @@ body { padding: 0; margin: 0;
     aspect-ratio: 16/9;
     display: block;
     /*中央寄せ*/ margin:auto;
-    margin-top:5% }
+    margin-top:20% }
 }
 
 #unity-loading-bar { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none }

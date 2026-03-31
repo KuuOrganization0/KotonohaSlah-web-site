@@ -9,16 +9,23 @@
   </head>
   <body>
 
-    <!-- html部分 -->
- <!--上部のバナー広告-->
+    <!--ゲーム全体-->
+   <div class="game-wrapper">
+     
+   <!-- ゲームタイトルのバナー -->
+    <div class="game-title-banner">
+    <img src="TemplateData/web-title-banner.png">
+    </div>
 
-
-    <div id="unity-container" class="unity-desktop">
+   <!-- ゲームのフレーム -->
+    <div class="game-frame">
+    <!--unity game-->
+     <div id="unity-container" class="unity-desktop"> 
       
       <!-- 実際のゲーム画面サイズ <-->
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
 
-      <!-- ロード画面 <-->
+      <!-- ロード画面 -->
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -36,7 +43,10 @@
         <div id="unity-build-title">言の葉 Slash</div>
       </div>
   
-    </div> <!-- end html -->
+     </div> <!-- end unity -->
+    </div><!-- end game-frame -->
+   
+   </div> <!-- end wrapper -->
 
     <!-- javascript部分 -->
     <script>

@@ -13,6 +13,7 @@ body { padding: 0; margin: 0;
   height: auto;
   padding-top: 56.25%; /* 16:9 の比率を確保 */
   background: #555;    /* 黒背景 */
+  border:3px solid #8b0000; /*縁を赤く*/
   margin: 0 auto 30px; /* 下に余白を作る*/
 }
 

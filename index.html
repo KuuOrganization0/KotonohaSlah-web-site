@@ -11,9 +11,10 @@
 
     <!--ゲーム全体-->
    <div class="game-wrapper">
+
    <!-- ゲームタイトルのバナー -->
     <div class="game-title-banner">
-    <img src="TemplateData/web-title-banner.png">
+     <img src="TemplateData/web-title-banner.png">
     </div>
 
    <!-- ゲームのフレーム -->
@@ -162,11 +163,18 @@
 
     </script>
 
-   <!-- firebase -->
+    <!-- firebase -->
     <script type="module">
   // firebaseの関数をインポートする
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
-  import { getAnalytics, getFirestore, collection, addDoc  } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
+  import { initializeApp} from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js";
+  // データベースにアクセスするための関数をインポート
+  import { 
+    getFirestore, 
+    collection, 
+    addDoc 
+  } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-firestore.js";
+
+  import { getAnalytics} from "https://www.gstatic.com/firebasejs/12.11.0/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -185,7 +193,13 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+
+  // Firestore を使う準備
+  const db = getFirestore(app);
+
+
    </script>
 
+   
   </body>
 </html>

@@ -25,7 +25,7 @@ body { padding: 0; margin: 0;
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 /*ipadにPC用の中央寄せの適用するのを無効化*/
-@media (max-width:1200px){
+@media screen and (max-width:1200px){
       #unity-container {left: 0; top: 0; transform: none} /*スマホでは親を左上に固定*/
       #unity-container.unity-desktop { left: 0; top: 0; transform: none } /*PC用を無効化*/
 }

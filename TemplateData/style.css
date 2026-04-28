@@ -1,30 +1,47 @@
+html{
+    font-size:100%; /*フォントの基準*/
+}
+
+img{
+    max-width: 100%;
+    vertical-align: bottom; /*下に出来る隙間を消す*/
+}
+
 body { padding: 0; margin: 0; 
-     /*スマホのスクロールを可能に変更*/overflow:visible;}
+     /*スマホのスクロールを可能に変更*/overflow:visible;
+}
      
 .game-title-banner img {
   max-width: 100%; 
-  height: auto;
   display: block;
 }
 
+
 .game-frame {
   position: relative; /*ゲーム画面のabsoluteの基準をgame-frameに変更*/
-  width: 80%;
+  width: 100%;
   height: auto;
-  padding-top: 56.25%; /* 16:9 の比率を確保 */
-  background: #555;    /* 黒背景 */
+  background: #f1f1f1;    /* 白背景 */
   margin: 0 auto 30px; /* 下に余白を作る*/
 }
 
-
+/* もみじの背景 */
+.momiji-background{
+    width: 100%;
+    z-index:0;
+}
 
 #unity-container { position: absolute ;
     /*中央寄せ*/justify-content: center}
 
+#unity-canvas{
+    border:3px solid#8b0000; /*縁を赤く*/
+}
+
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%);}
 
 /*ipadにPC用の中央寄せの適用するのを無効化*/
-@media (max-width:1200px){
+@media screen and (max-width:1200px){
       #unity-container {left: 0; top: 0; transform: none} /*スマホでは親を左上に固定*/
       #unity-container.unity-desktop { left: 0; top: 0; transform: none } /*PC用を無効化*/
 }

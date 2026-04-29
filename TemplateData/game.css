@@ -10,11 +10,6 @@ img{
 body { padding: 0; margin: 0; 
      /*スマホのスクロールを可能に変更*/overflow:visible;
 }
-     
-.game-title-banner img {
-  max-width: 100%; 
-  display: block;
-}
 
 
 .game-frame {

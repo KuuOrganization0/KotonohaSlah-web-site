@@ -10,12 +10,10 @@ img{
 body { padding: 0; margin: 0; 
      /*スマホのスクロールを可能に変更*/overflow:visible;
 }
-     
-.game-title-banner img {
-  max-width: 100%; 
-  display: block;
-}
 
+.banner{
+    width: 40%;
+}
 
 .game-frame {
   position: relative; /*ゲーム画面のabsoluteの基準をgame-frameに変更*/
@@ -33,10 +31,6 @@ body { padding: 0; margin: 0;
 
 #unity-container { position: absolute ;
     /*中央寄せ*/justify-content: center}
-
-#unity-canvas{
-    border:3px solid#8b0000; /*縁を赤く*/
-}
 
 #unity-container.unity-desktop { left: 50%; top: 50%; transform: translate(-50%, -50%);}
 

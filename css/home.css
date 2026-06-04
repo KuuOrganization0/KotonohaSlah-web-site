@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    background-color: #fdf8f8;
+    color:#333;
+    font-family: 'YoGothic','Yu Gothic',sans-serif; /*フォントの種類をOSごとに指定*/
+}
+
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+
+li{
+    list-style:none;
+}
+
+a{
+    color:#333;
+    text-decoration:none; /*リンクに下線を引かない*/
+}
+
+/* ヘッダー部分-------------------------------- */
+#header{
+   max-width: 2000px;
+   max-height: 500px;
+}
+
+#header .banner a{
+    display: flex; /*子要素を横並びにしつつ、並び替えや折り返しも幅広く設定可能*/
+    justify-content: center;/*横方向の中央寄せ*/
+}
+
+#header .banner img{
+     width: 80%;
+}
+
+/* -------------------------------------------- */
+
+/* ゲームプレイセクション ------------------------*/
+.game-play-section{
+    height: 300px;
+    display: flex; /*子要素のaを中央寄せにするため*/
+    justify-content: center;/*横方向の中央寄せ*/
+}
+
+.game-play-section h1{
+    display: flex; /*子要素のaを中央寄せにするため*/
+    justify-content: center;/*横方向の中央寄せ*/
+    align-items: center;
+    background-color:#000;
+    border-radius: 5%;/*ボタンに丸みを帯びさせる*/
+    margin-top:120px;
+    margin-bottom: 120px ;
+}
+
+.game-play-section h1 a{
+    color:#fdf8f8;
+}

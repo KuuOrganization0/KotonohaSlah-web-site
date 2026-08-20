@@ -61,3 +61,7 @@ a{
 .game-play-section h1 a{
     color:#fdf8f8;
 }
+
+.introduction p{
+    text-align:center; /*テキストを横に中央寄せ*/
+}
